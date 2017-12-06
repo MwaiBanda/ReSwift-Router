@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                           URLs are used on the web. Using ReSwiftRouter you can navigate your app by defining the target location
                           in the form of a URL-like sequence of identifiers.
                         DESC
-  s.homepage         = "https://github.com/ReSwift/ReSwift-Router"
+  s.homepage         = "https://github.com/jasorod/ReSwift-Router"
   s.license          = { :type => "MIT", :file => "LICENSE.md" }
   s.author           = { "Benjamin Encz" => "me@benjamin-encz.de" }
   s.social_media_url = "http://twitter.com/benjaminencz"
