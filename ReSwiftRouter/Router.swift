@@ -59,7 +59,8 @@ open class Router<State: StateType>: StoreSubscriber {
                                 .changeRouteSegment(
                                     segmentToBeReplaced,
                                     to: newSegment,
-                                    animated: state.changeRouteAnimated) {
+                                    animated: state.changeRouteAnimated,
+                                    dispatchQueue: waitForRoutingCompletionQueue) {
                                         semaphore.signal()
                         }
                     }
