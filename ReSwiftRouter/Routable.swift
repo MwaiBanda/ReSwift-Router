@@ -24,7 +24,8 @@ public protocol Routable {
         _ from: RouteElementIdentifier,
         to: RouteElementIdentifier,
         animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) -> Routable
+        completionHandler: @escaping RoutingCompletionHandler,
+        dispatchQueue: DispatchQueue) -> Routable
 
 }
 
@@ -48,7 +49,8 @@ extension Routable {
         _ from: RouteElementIdentifier,
         to: RouteElementIdentifier,
         animated: Bool,
-        completionHandler: @escaping RoutingCompletionHandler) -> Routable {
+        completionHandler: @escaping RoutingCompletionHandler,
+        dispatchQueue: DispatchQueue) -> Routable {
             fatalError("This routable cannot change segments. You have not implemented it. (Asked \(type(of: self)) to change from \(from) to \(to))")
     }
 
