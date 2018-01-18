@@ -60,8 +60,8 @@ open class Router<State: StateType>: StoreSubscriber {
                                     segmentToBeReplaced,
                                     to: newSegment,
                                     animated: state.changeRouteAnimated,
-                                    completionHandler: { semaphore.signal },
-                                    dispatchQueue: waitForRoutingCompletionQueue)
+                                    completionHandler: { semaphore.signal() },
+                                    dispatchQueue: self.waitForRoutingCompletionQueue)
                     }
 
                 case let .push(responsibleRoutableIndex, segmentToBePushed):
