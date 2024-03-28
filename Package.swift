@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "ReSwiftRouter", targets: ["ReSwiftRouter"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReSwift/ReSwift.git"),
+        .package(url: "https://github.com/ReSwift/ReSwift.git", .upToNextMajor(from: "6.1.0")),
     ],
     targets: [
         .target(
