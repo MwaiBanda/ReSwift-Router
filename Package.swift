@@ -1,0 +1,22 @@
+// swift-tools-version:4.0
+
+import PackageDescription
+
+let package = Package(
+    name: "ReSwiftRouter",
+    products: [
+        .library(name: "ReSwiftRouter", targets: ["ReSwiftRouter"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/ReSwift/ReSwift.git"),
+    ],
+    targets: [
+        .target(
+            name: "ReSwiftRouter",
+            dependencies: [
+                "ReSwift"
+            ],
+            path: "ReSwiftRouter"
+        ),
+    ]
+)
